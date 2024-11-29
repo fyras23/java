@@ -29,7 +29,19 @@ public class Main {
 
 System.out.println("--------------------------------------");
 
+        Dolphin dolphin = new Dolphin("Flipper", "Cetacea", 8, false, "Ocean", 25.5f);
+        Penguin penguin = new Penguin("Pingu", "Spheniscidae", 5, false, "Antarctica", 15.2f);
+        Terrestrial lion = new Terrestrial("Lion", "Felidae", 10, true, 4);
+        Aquatic fish = new Aquatic("Goldfish", "Carp", 1, false, "Pond");
 
+        System.out.println(dolphin);
+        System.out.println(penguin);
+        System.out.println(lion);
+        System.out.println(fish);
+
+        dolphin.swim();
+        penguin.swim();
+        fish.swim();
 
 
     }

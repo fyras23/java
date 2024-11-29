@@ -6,7 +6,6 @@ public class Animal {
     private int age;
     private boolean enDanger;
 
-    // Constructors
     public Animal(String nom) {
         this.nom = nom;
     }
@@ -18,13 +17,14 @@ public class Animal {
         this.enDanger = enDanger;
     }
 
-    // Getters and Setters
     public String getNom() {
         return nom;
     }
 
     public void setNom(String nom) {
-        this.nom = nom;
+        if (!nom.isEmpty()) {
+            this.nom = nom;
+        }
     }
 
     public String getFamille() {
@@ -51,7 +51,6 @@ public class Animal {
         this.enDanger = enDanger;
     }
 
-    // toString method for easy printing
     @Override
     public String toString() {
         return "Animal{" +
@@ -62,7 +61,6 @@ public class Animal {
                 '}';
     }
 
-    // Equals method to compare animals by name
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
